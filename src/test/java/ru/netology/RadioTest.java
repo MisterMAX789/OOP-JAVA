@@ -70,6 +70,26 @@ class RadioTest {
         int actual = radio.getCurrentNumberStation();
         assertEquals(expected, actual);
     }
+    //Увеличение радиостанции при максимальном значении
+    @Test
+    void increaseNumberStationNineTest() {
+        Radio radio = new Radio();
+        radio.setCurrentNumberStation(9);
+        radio.increaseNumberStationNine();
+        int expected = 0;
+        int actual = radio.getCurrentNumberStation();
+        assertEquals(expected, actual);
+    }
+    //Увеличение радиостанции при максимальном значении
+    @Test
+    void decreaseNumberStationZeroTest() {
+        Radio radio = new Radio();
+        radio.setCurrentNumberStation(0);
+        radio.decreaseNumberStationZero();
+        int expected = 9;
+        int actual = radio.getCurrentNumberStation();
+        assertEquals(expected, actual);
+    }
 
     //Увеличение радиостанции при значении больше максимального
     @Test
@@ -159,3 +179,4 @@ class RadioTest {
         assertEquals(expected, actual);
     }
 }
+

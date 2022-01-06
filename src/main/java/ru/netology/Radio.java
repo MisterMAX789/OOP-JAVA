@@ -56,8 +56,6 @@ public class Radio {
     private int currentSoundVolume;
     private int minSoundVolume = 0;
     private int maxSoundVolume = 10;
-    // Работа со звуком
-
     public int getCurrentSoundVolume() {
         return currentSoundVolume;
     }
@@ -84,5 +82,7 @@ public class Radio {
         return currentSoundVolume;
     }
 }
+
+
 
 
