@@ -29,9 +29,7 @@ public class Radio {
 
     //уменьшение при условии что станция = 0
     public int decreaseNumberStationZero() {
-        if (currentNumberStation == 0) {
             currentNumberStation = 9;
-        }
         return currentNumberStation;
     }
 
@@ -46,9 +44,7 @@ public class Radio {
 
     //увеличение при условии что станция = 9
     public int increaseNumberStationNine() {
-        if (currentNumberStation == 9) {
             currentNumberStation = 0;
-        }
         return currentNumberStation;
     }
 
