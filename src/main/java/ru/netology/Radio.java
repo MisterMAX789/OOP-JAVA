@@ -18,9 +18,8 @@ public class Radio {
             currentNumberStation = getCurrentNumberStation();
     }
 
-    // уменьшение радиостаници
     public int decreaseNumberStation() {
-        if (currentNumberStation > 0) {
+        if (currentNumberStation > minNumberStation) {
             currentNumberStation--;
         } else
             currentNumberStation = decreaseNumberStationZero();
@@ -29,13 +28,14 @@ public class Radio {
 
     //уменьшение при условии что станция = 0
     public int decreaseNumberStationZero() {
-            currentNumberStation = 9;
+        currentNumberStation = maxNumberStation;
         return currentNumberStation;
     }
 
+
     // увеличение радиостаници
     public int increaseNumberStation() {
-        if (currentNumberStation < 9) {
+        if (currentNumberStation < maxNumberStation) {
             currentNumberStation++;
         } else
             currentNumberStation = increaseNumberStationNine();
@@ -44,7 +44,7 @@ public class Radio {
 
     //увеличение при условии что станция = 9
     public int increaseNumberStationNine() {
-            currentNumberStation = 0;
+        currentNumberStation = minNumberStation;
         return currentNumberStation;
     }
 
@@ -52,6 +52,7 @@ public class Radio {
     private int currentSoundVolume;
     private int minSoundVolume = 0;
     private int maxSoundVolume = 10;
+
     public int getCurrentSoundVolume() {
         return currentSoundVolume;
     }
@@ -62,7 +63,7 @@ public class Radio {
 
     // уменьшение громкости звука
     public int decreaseSoundVolume() {
-        if (currentSoundVolume > 0) {
+        if (currentSoundVolume > minSoundVolume) {
             currentSoundVolume--;
         } else
             currentSoundVolume = getCurrentSoundVolume();
@@ -71,7 +72,7 @@ public class Radio {
 
     // увеличение громкости звука
     public int increaseSoundVolume() {
-        if (currentSoundVolume < 10) {
+        if (currentSoundVolume < maxSoundVolume) {
             currentSoundVolume++;
         } else
             currentSoundVolume = getCurrentSoundVolume();
