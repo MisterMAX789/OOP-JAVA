@@ -22,16 +22,9 @@ public class Radio {
         if (currentNumberStation > minNumberStation) {
             currentNumberStation--;
         } else
-            currentNumberStation = decreaseNumberStationZero();
+            currentNumberStation = maxNumberStation;
         return currentNumberStation;
     }
-
-    //уменьшение при условии что станция = 0
-    public int decreaseNumberStationZero() {
-        currentNumberStation = maxNumberStation;
-        return currentNumberStation;
-    }
-
 
     // увеличение радиостаници
     public int increaseNumberStation() {
