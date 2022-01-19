@@ -76,7 +76,7 @@ class RadioTest {
     void increaseNumberStationNineTest() {
         Radio radio = new Radio();
         radio.setCurrentNumberStation(9);
-        radio.increaseNumberStationNine();
+        radio.increaseNumberStation();
         int expected = 0;
         int actual = radio.getCurrentNumberStation();
         assertEquals(expected, actual);

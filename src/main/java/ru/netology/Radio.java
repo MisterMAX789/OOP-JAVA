@@ -14,15 +14,18 @@ public class Radio {
     public void setCurrentNumberStation(int newCurrentNumberStation) {
         if (newCurrentNumberStation <= 9 && newCurrentNumberStation >= 0) {
             currentNumberStation = newCurrentNumberStation;
-        } else
+        } else {
             currentNumberStation = getCurrentNumberStation();
+        }
     }
 
     public int decreaseNumberStation() {
         if (currentNumberStation > minNumberStation) {
             currentNumberStation--;
-        } else
+        } else {
             currentNumberStation = maxNumberStation;
+            return currentNumberStation;
+        }
         return currentNumberStation;
     }
 
@@ -30,14 +33,10 @@ public class Radio {
     public int increaseNumberStation() {
         if (currentNumberStation < maxNumberStation) {
             currentNumberStation++;
-        } else
-            currentNumberStation = increaseNumberStationNine();
-        return currentNumberStation;
-    }
-
-    //увеличение при условии что станция = 9
-    public int increaseNumberStationNine() {
-        currentNumberStation = minNumberStation;
+        } else {
+            currentNumberStation = minNumberStation;
+            return currentNumberStation;
+        }
         return currentNumberStation;
     }
 
@@ -58,8 +57,10 @@ public class Radio {
     public int decreaseSoundVolume() {
         if (currentSoundVolume > minSoundVolume) {
             currentSoundVolume--;
-        } else
+        } else {
             currentSoundVolume = getCurrentSoundVolume();
+            return currentSoundVolume;
+        }
         return currentSoundVolume;
     }
 
@@ -67,12 +68,10 @@ public class Radio {
     public int increaseSoundVolume() {
         if (currentSoundVolume < maxSoundVolume) {
             currentSoundVolume++;
-        } else
+        } else {
             currentSoundVolume = getCurrentSoundVolume();
+            return currentSoundVolume;
+        }
         return currentSoundVolume;
     }
 }
-
-
-
-
