@@ -82,16 +82,6 @@ public class Radio {
         }
     }
 
-    public void setCurrentRadioStationNumber(int currentRadioStation) {
-        if (currentRadioStation > maxRadioStation) {
-            return;
-        }
-        if (currentRadioStation < minRadioStation) {
-            return;
-        }
-        this.currentRadioStation = currentRadioStation;
-    }
-
     public int getCurrentRadioVolume() {
         return currentRadioVolume;
 
